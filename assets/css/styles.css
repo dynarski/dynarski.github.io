@@ -160,3 +160,18 @@ ul.link-list li { margin: 8px 0; }
   box-shadow: 0 2px 8px rgba(0,0,0,.08);
 }
 .tip-wrap:hover .tip-box { display: block; }
+
+/* ── Research section nav ── */
+.section-nav {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 18px;
+  font-size: 14px;
+}
+.section-nav a {
+  color: var(--link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.section-nav a:hover { border-bottom-color: var(--link); }
