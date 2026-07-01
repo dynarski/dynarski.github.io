@@ -7,37 +7,56 @@
 <link href="assets/css/styles.css" rel="stylesheet"/>
 <style>
 .bio-box {
-  background: var(--soft, #f7f7f7);
-  border: 1px solid var(--border, #ddd);
-  padding: 16px 20px;
-  font-size: 15px;
-  line-height: 1.6;
-  max-width: 680px;
-  margin: 10px 0 0;
+ background: var(--soft, #f7f7f7);
+ border: 1px solid var(--border, #ddd);
+ padding: 16px 20px;
+ font-size: 15px;
+ line-height: 1.6;
+ max-width: 680px;
+ margin: 10px 0 0;
 }
 .photo-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  margin-top: 12px;
+ display: flex;
+ flex-wrap: wrap;
+ gap: 16px;
+ margin-top: 12px;
 }
 .photo-item {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 6px;
+ display: flex;
+ flex-direction: column;
+ align-items: flex-start;
+ gap: 6px;
 }
 .photo-item a img {
-  display: block;
-  width: 140px;
-  border: 1px solid var(--border, #ddd);
-  border-radius: 3px;
+ display: block;
+ width: 140px;
+ border: 1px solid var(--border, #ddd);
+ border-radius: 3px;
 }
 .photo-item a img:hover { opacity: .85; }
 .photo-caption {
-  font-size: 13px;
-  color: var(--muted, #5f6368);
+ font-size: 13px;
+ color: var(--muted, #5f6368);
 }
+
+details { margin-top: 12px; }
+details summary {
+  font-size: 15px;
+  color: var(--link, #1f5f99);
+  cursor: pointer;
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before {
+  content: '▸';
+  font-size: 12px;
+  transition: transform 0.15s;
+}
+details[open] summary::before { transform: rotate(90deg); }
+details .photo-grid { margin-top: 14px; }
 </style>
 </head>
 <body>
@@ -60,9 +79,9 @@
 
 <section class="about-block">
 <h2>Bio</h2>
-<p>Susan Dynarski is an economist and the Patricia Albjerg Graham Professor of Education at Harvard University&#8217;s Graduate School of Education. Her research focuses on how education policy shapes economic opportunity and inequality, with an emphasis on college access, financial aid, student debt, and K&#8211;12 schooling &#8212; questions she came to as a first-generation college graduate and former union organizer. She has written more than sixty columns for the New York Times and testified before the Senate Finance and HELP Committees and the House Ways and Means Committee on education and tax policy.</p>
-<p>She is a faculty research associate at the National Bureau of Economic Research and a member of the National Academy of Education, the National Academy of Social Insurance, and the American Academy of Arts and Sciences. She is past president of the Association for Education Finance and Policy and the Midwest Economics Association, and a Carnegie Fellow. In 2017 she received the Spencer Foundation Award for Excellence in Education Research; the National Association of Student Financial Aid Administrators awarded her the Robert P. Huff Golden Quill Award.</p>
-<p>From 2008 to 2021 Dynarski was professor of public policy, education, and economics at the University of Michigan, where she co-founded the Education Policy Initiative and the Michigan Education Data Center. She holds a PhD in Economics from MIT and a Master&#8217;s in Public Policy from Harvard. She has advised the Federal Reserve Board of Governors, Consumer Financial Protection Bureau, White House, Treasury, and the Department of Education.</p>
+<p>Susan Dynarski is an economist and the Patricia Albjerg Graham Professor of Education at Harvard University&#8217;s Graduate School of Education. Her research focuses on how education policy shapes economic opportunity and inequality, with an emphasis on college access, financial aid, student debt, and K&#8211;12 schooling. She came to these questions as a first-generation college graduate and former union organizer. She has written extensively for the New York Times and testified before the Senate Finance and HELP Committees and the House Ways and Means Committee on education and tax policy.</p>
+<p>She is a faculty research associate at the National Bureau of Economic Research and a member of the National Academy of Education, the National Academy of Social Insurance, and the American Academy of Arts and Sciences. She is past president of the Association for Education Finance and Policy and the Midwest Economics Association, and a Carnegie Fellow. In 2017 she received the Spencer Foundation Award for Excellence in Education Research; the National Association of Student Financial Aid Administrators awarded her the Robert P. Huff Golden Quill Award. </p>
+<p>From 2008 to 2021 Dynarski was professor of public policy, education, and economics at the University of Michigan, where she co-founded the Education Policy Initiative and the Michigan Education Data Center. </p>
 </section>
 
 <section class="about-block">
@@ -100,62 +119,65 @@ Cambridge, MA 02138</p>
 <div class="bio-box">Susan Dynarski is an economist and the Patricia Albjerg Graham Professor of Education at Harvard University&#8217;s Graduate School of Education. She holds a PhD in Economics from MIT and a Master&#8217;s in Public Policy from Harvard. She is a faculty research associate at the National Bureau of Economic Research, a Carnegie Fellow, and a member of the National Academy of Education and the American Academy of Arts and Sciences. A first-generation college graduate and former union organizer, she studies how education policy shapes economic opportunity and inequality.</div>
 
 <h3 style="font-size: 16px; margin: 20px 0 6px;">Full bio</h3>
-<div class="bio-box"><p style="margin:0 0 12px">Susan Dynarski is an economist and the Patricia Albjerg Graham Professor of Education at Harvard University&#8217;s Graduate School of Education. Her research focuses on how education policy shapes economic opportunity and inequality, with an emphasis on college access, financial aid, student debt, and K&#8211;12 schooling &#8212; questions she came to as a first-generation college graduate and former union organizer. She has written more than sixty columns for the New York Times and testified before the Senate Finance and HELP Committees and the House Ways and Means Committee on education and tax policy.</p>
-<p>She is a faculty research associate at the National Bureau of Economic Research and a member of the National Academy of Education, the National Academy of Social Insurance, and the American Academy of Arts and Sciences. She is past president of the Association for Education Finance and Policy and the Midwest Economics Association, and a Carnegie Fellow. In 2017 she received the Spencer Foundation Award for Excellence in Education Research; the National Association of Student Financial Aid Administrators awarded her the Robert P. Huff Golden Quill Award.</p>
-<p>From 2008 to 2021 Dynarski was professor of public policy, education, and economics at the University of Michigan, where she co-founded the Education Policy Initiative and the Michigan Education Data Center. She holds a PhD in Economics from MIT and a Master&#8217;s in Public Policy from Harvard. She has advised the Federal Reserve Board of Governors, Consumer Financial Protection Bureau, White House, Treasury, and the Department of Education.</p></div>
+<div class="bio-box"><p style="margin:0 0 12px">Susan Dynarski is an economist and the Patricia Albjerg Graham Professor of Education at Harvard University&#8217;s Graduate School of Education. Her research focuses on how education policy shapes economic opportunity and inequality, with an emphasis on college access, financial aid, student debt, and K&#8211;12 schooling. She came to these questions as a first-generation college graduate and former union organizer. She has written extensively for the New York Times and testified before the Senate Finance and HELP Committees and the House Ways and Means Committee on education and tax policy.</p>
+<p>She is a faculty research associate at the National Bureau of Economic Research and a member of the National Academy of Education, the National Academy of Social Insurance, and the American Academy of Arts and Sciences. She is past president of the Association for Education Finance and Policy and the Midwest Economics Association, and a Carnegie Fellow. In 2017 she received the Spencer Foundation Award for Excellence in Education Research; the National Association of Student Financial Aid Administrators awarded her the Robert P. Huff Golden Quill Award. </p>
+<p>From 2008 to 2021 Dynarski was professor of public policy, education, and economics at the University of Michigan, where she co-founded the Education Policy Initiative and the Michigan Education Data Center. </p></div>
 
 <h3 style="font-size: 16px; margin: 20px 0 6px;">Photos</h3>
-<p style="font-size: 14px; color: var(--muted, #5f6368); margin-bottom: 12px;">Click a photo to download.</p>
+<details>
+<summary>View photos for download</summary>
+<p style="font-size: 14px; color: var(--muted, #5f6368); margin: 10px 0 12px;">Click a photo to download.</p>
 <div class="photo-grid">
 <div class="photo-item">
-  <a href="susan-dynarski-portrait.jpg" download="susan-dynarski-portrait.jpg">
-    <img src="susan-dynarski-portrait.jpg" alt="Susan Dynarski portrait"/>
-  </a>
-  <span class="photo-caption">Website portrait</span>
+ <a href="susan-dynarski-portrait.jpg" download="susan-dynarski-portrait.jpg">
+  <img src="susan-dynarski-portrait.jpg" alt="Susan Dynarski portrait"/>
+ </a>
+ <span class="photo-caption">Website portrait</span>
 </div>
 <div class="photo-item">
-  <a href="assets/photos/Prof.Susan%20Dynarski%20-%2030.jpg" download="Prof.Susan Dynarski - 30.jpg">
-    <img src="assets/photos/Prof.Susan%20Dynarski%20-%2030.jpg" alt="Susan Dynarski photo 30"/>
-  </a>
-  <span class="photo-caption">Photo 30</span>
+ <a href="assets/photos/Prof.Susan%20Dynarski%20-%2030.jpg" download="Prof.Susan Dynarski - 30.jpg">
+  <img src="assets/photos/Prof.Susan%20Dynarski%20-%2030.jpg" alt="Susan Dynarski photo 30"/>
+ </a>
+ <span class="photo-caption">Photo 30</span>
 </div>
 <div class="photo-item">
-  <a href="assets/photos/Prof.Susan%20Dynarski%20-%2038.jpg" download="Prof.Susan Dynarski - 38.jpg">
-    <img src="assets/photos/Prof.Susan%20Dynarski%20-%2038.jpg" alt="Susan Dynarski photo 38"/>
-  </a>
-  <span class="photo-caption">Photo 38</span>
+ <a href="assets/photos/Prof.Susan%20Dynarski%20-%2038.jpg" download="Prof.Susan Dynarski - 38.jpg">
+  <img src="assets/photos/Prof.Susan%20Dynarski%20-%2038.jpg" alt="Susan Dynarski photo 38"/>
+ </a>
+ <span class="photo-caption">Photo 38</span>
 </div>
 <div class="photo-item">
-  <a href="assets/photos/Prof.Susan%20Dynarski%20-%2028.jpg" download="Prof.Susan Dynarski - 28.jpg">
-    <img src="assets/photos/Prof.Susan%20Dynarski%20-%2028.jpg" alt="Susan Dynarski photo 28"/>
-  </a>
-  <span class="photo-caption">Photo 28</span>
+ <a href="assets/photos/Prof.Susan%20Dynarski%20-%2028.jpg" download="Prof.Susan Dynarski - 28.jpg">
+  <img src="assets/photos/Prof.Susan%20Dynarski%20-%2028.jpg" alt="Susan Dynarski photo 28"/>
+ </a>
+ <span class="photo-caption">Photo 28</span>
 </div>
 <div class="photo-item">
-  <a href="assets/photos/Prof.Susan%20Dynarski%20-%2024.jpg" download="Prof.Susan Dynarski - 24.jpg">
-    <img src="assets/photos/Prof.Susan%20Dynarski%20-%2024.jpg" alt="Susan Dynarski photo 24"/>
-  </a>
-  <span class="photo-caption">Photo 24</span>
+ <a href="assets/photos/Prof.Susan%20Dynarski%20-%2024.jpg" download="Prof.Susan Dynarski - 24.jpg">
+  <img src="assets/photos/Prof.Susan%20Dynarski%20-%2024.jpg" alt="Susan Dynarski photo 24"/>
+ </a>
+ <span class="photo-caption">Photo 24</span>
 </div>
 <div class="photo-item">
-  <a href="assets/photos/Prof.Susan%20Dynarski%20-%2023.jpg" download="Prof.Susan Dynarski - 23.jpg">
-    <img src="assets/photos/Prof.Susan%20Dynarski%20-%2023.jpg" alt="Susan Dynarski photo 23"/>
-  </a>
-  <span class="photo-caption">Photo 23</span>
+ <a href="assets/photos/Prof.Susan%20Dynarski%20-%2023.jpg" download="Prof.Susan Dynarski - 23.jpg">
+  <img src="assets/photos/Prof.Susan%20Dynarski%20-%2023.jpg" alt="Susan Dynarski photo 23"/>
+ </a>
+ <span class="photo-caption">Photo 23</span>
 </div>
 <div class="photo-item">
-  <a href="assets/photos/Prof.Susan%20Dynarski%20-%2015.jpg" download="Prof.Susan Dynarski - 15.jpg">
-    <img src="assets/photos/Prof.Susan%20Dynarski%20-%2015.jpg" alt="Susan Dynarski photo 15"/>
-  </a>
-  <span class="photo-caption">Photo 15</span>
+ <a href="assets/photos/Prof.Susan%20Dynarski%20-%2015.jpg" download="Prof.Susan Dynarski - 15.jpg">
+  <img src="assets/photos/Prof.Susan%20Dynarski%20-%2015.jpg" alt="Susan Dynarski photo 15"/>
+ </a>
+ <span class="photo-caption">Photo 15</span>
 </div>
 <div class="photo-item">
-  <a href="assets/photos/Prof.Susan%20Dynarski%20-%2004.jpg" download="Prof.Susan Dynarski - 04.jpg">
-    <img src="assets/photos/Prof.Susan%20Dynarski%20-%2004.jpg" alt="Susan Dynarski photo 04"/>
-  </a>
-  <span class="photo-caption">Photo 04</span>
+ <a href="assets/photos/Prof.Susan%20Dynarski%20-%2004.jpg" download="Prof.Susan Dynarski - 04.jpg">
+  <img src="assets/photos/Prof.Susan%20Dynarski%20-%2004.jpg" alt="Susan Dynarski photo 04"/>
+ </a>
+ <span class="photo-caption">Photo 04</span>
 </div>
 </div>
+</details>
 
 <h3 style="font-size: 16px; margin: 20px 0 6px;">CV</h3>
 <p><a href="https://drive.google.com/file/d/1HPMUhIBD-CAKgwLNjorE9fPvN6MfXBRu/view?usp=sharing">Download CV (PDF)</a></p>
