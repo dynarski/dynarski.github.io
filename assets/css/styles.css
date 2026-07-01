@@ -101,7 +101,7 @@ ul.link-list li { margin: 8px 0; }
 
 /* ── Research page ── */
 .paper { padding: 0 0 22px; margin: 0 0 22px; border-bottom: 1px solid #e8e8e4; }
-.paper:last-child { border-bottom: none; padding-bottom: 0; }
+.paper:last-child { border-bottom: 1px solid #e8e8e4; padding-bottom: 22px; }
 .bucket-note { color: var(--muted); font-size: 15px; max-width: 760px; margin: 0 0 22px; }
 .desc { font-size: 16px; max-width: 760px; margin-bottom: 8px; }
 .links { font-size: 14px; color: var(--muted); margin-top: 6px; }
@@ -135,7 +135,8 @@ ul.link-list li { margin: 8px 0; }
 .research-main h3 a { color: var(--text); text-decoration: none; }
 .research-main h3 a:hover { color: var(--link); text-decoration: underline; text-underline-offset: 3px; }
 .research-main .intro { font-size: 18px; color: #2a2a2a; max-width: 780px; }
-.research-main section { padding: 34px 0 30px; border-bottom: 1px solid #d8d8d8; }
+.research-main .page-header { margin-bottom: 0; }
+.research-main section { padding: 20px 0 30px; }
 .research-main .bucket-note { font-size: 16px; }
 .research-main .desc { font-size: 15.5px; }
 .meta a { color: var(--link); text-decoration: none; }
@@ -177,3 +178,6 @@ ul.link-list li { margin: 8px 0; }
   border-bottom: 1px solid transparent;
 }
 .section-nav a:hover { border-bottom-color: var(--link); }
+
+/* ── About page subheadings ── */
+.about-subhead { font-size: 16px; font-weight: 600; margin: 20px 0 6px; }
